@@ -5,7 +5,8 @@ function init(){
 	var tails_out = document.querySelector("#tails_out");
 	document.querySelector("#heads_butt").addEventListener("click", heads);
 	document.querySelector("#tails_butt").addEventListener("click", tails);
-	defaultCounts();
+	document.querySelector("#reset").addEventListener("click", resetCounts);
+	loadCounts();
 }
 
 function store(){
@@ -15,7 +16,7 @@ function store(){
 	localStorage.setItem('tailsStore', tails_store);
 }
 
-function defaultCounts(){
+function loadCounts(){
 	var heads_load = localStorage.getItem('headsStore');
 	var tails_load = localStorage.getItem('tailsStore');
 	heads_out.textContent = heads_load;
@@ -33,4 +34,10 @@ function tails(){
 	tails_count++;
 	tails_out.textContent = tails_count;
 	store();
+}
+
+function resetCounts(){
+	localStorage.setItem('headsStore', 0);
+	localStorage.setItem('tailsStore', 0);
+	loadCounts();
 }
