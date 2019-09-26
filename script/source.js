@@ -8,6 +8,7 @@ function init(){
 	document.querySelector("#tails_butt").addEventListener("click", tails);
 	document.querySelector("#reset").addEventListener("click", resetCounts);
 	loadCounts();
+	percents();
 }
 
 function store(){
@@ -18,6 +19,7 @@ function store(){
 	localStorage.setItem('tailsStore', tails_store);
 	localStorage.setItem('totalStore', total_store);
 	loadCounts();
+	percents();
 }
 
 function loadCounts(){
@@ -53,4 +55,24 @@ function resetCounts(){
 	localStorage.setItem('tailsStore', 0);
 	localStorage.setItem('totalStore', 0);
 	loadCounts();
+	percents();
+}
+
+function percentHeads(){
+	var heads_count = parseInt(heads_out.textContent, 10);
+	var total_count = parseInt(total.textContent, 10);
+	var percent_heads = Math.round((heads_count/total_count)*100);
+	document.querySelector("#percent_heads").textContent = percent_heads + "%";
+}
+
+function percentTails(){
+	var tails_count = parseInt(tails_out.textContent, 10);
+	var total_count = parseInt(total.textContent, 10);
+	var percent_tails = Math.round((tails_count/total_count)*100);
+	document.querySelector("#percent_tails").textContent = percent_tails + "%";
+}
+
+function percents(){
+	percentHeads();
+	percentTails();
 }
