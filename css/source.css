@@ -1,3 +1,7 @@
+body{
+	font-family: Areial, sans-serif;
+}
+
 table, td, tr {
 	border: 2px solid black;
 }
@@ -9,7 +13,7 @@ table{
 td{
 	width: 33%;
 	height: 1em;
-	background: #AC9692;
+	background: #444F52;
 }
 
 button{
@@ -17,4 +21,9 @@ button{
 	height: 100%;
 	background-color: #5A9C9E;
 	border-bottom-color: #5A9C9E;
+}
+
+.output{
+	background-color: black;
+	color: #17FF00;
 }
