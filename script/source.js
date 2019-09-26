@@ -7,8 +7,19 @@ function init(){
 	document.querySelector("#heads_butt").addEventListener("click", heads);
 	document.querySelector("#tails_butt").addEventListener("click", tails);
 	document.querySelector("#reset").addEventListener("click", resetCounts);
+	window.addEventListener("keydown", getKey);
 	loadCounts();
 	percents();
+}
+
+function getKey(){
+	if(event.keyCode == 72){
+		heads();
+	}else if(event.keyCode == 84){
+		tails();
+	}else if(event.keyCode == 82){
+		resetCounts();
+	}
 }
 
 function store(){
