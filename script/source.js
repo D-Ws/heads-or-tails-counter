@@ -62,14 +62,22 @@ function percentHeads(){
 	var heads_count = parseInt(heads_out.textContent, 10);
 	var total_count = parseInt(total.textContent, 10);
 	var percent_heads = Math.round((heads_count/total_count)*100);
-	document.querySelector("#percent_heads").textContent = percent_heads + "%";
+	if(isNaN(percent_heads)){
+		document.querySelector("#percent_heads").textContent = "0%";
+	}else{
+		document.querySelector("#percent_heads").textContent = percent_heads + "%";
+	}
 }
 
 function percentTails(){
 	var tails_count = parseInt(tails_out.textContent, 10);
 	var total_count = parseInt(total.textContent, 10);
 	var percent_tails = Math.round((tails_count/total_count)*100);
-	document.querySelector("#percent_tails").textContent = percent_tails + "%";
+	if(isNaN(percent_tails)){
+		document.querySelector("#percent_tails").textContent = "0%";
+	}else{
+		document.querySelector("#percent_tails").textContent = percent_tails + "%";
+	}
 }
 
 function percents(){
