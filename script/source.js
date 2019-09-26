@@ -17,7 +17,7 @@ function getKey(){
 		heads();
 	}else if(event.keyCode == 84){
 		tails();
-	}else if(event.keyCode == 82){
+	}else if(event.keyCode == 8){
 		resetCounts();
 	}
 }
