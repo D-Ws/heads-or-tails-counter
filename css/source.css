@@ -1,3 +1,12 @@
-table-cell{
-	
+table, td, tr {
+	border: 2px solid black;
+}
+
+table{
+	background: #8E7E7B;
+}
+
+td{
+	min-width: 10em;
+	background: #AC9692;
 }
