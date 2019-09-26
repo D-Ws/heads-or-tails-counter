@@ -4,6 +4,8 @@ body{
 
 table, td, tr {
 	border: 2px solid black;
+	width: 100%;
+	height: 100%;
 }
 
 table{
@@ -11,9 +13,13 @@ table{
 }
 
 td{
-	width: 33%;
 	height: 1em;
 	background: #8A8C8C;
+	width: 33%;
+}
+
+.text{
+	width: 10%;
 }
 
 button{
@@ -26,4 +32,5 @@ button{
 .output{
 	background-color: black;
 	color: #17FF00;
+	width: 33%;
 }
